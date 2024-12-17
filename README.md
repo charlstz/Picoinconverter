@@ -1,3 +1,1 @@
-pi coin converter 
-Web application based on pi coin converter with GCV Value of $ 314,159
-agreed 💯 with Global community as vision and mission of pi network is to build mostly popular and used cryptocurrency for daily service.
+Pi Coin Converter is a web application based on the Pi Coin, with a GCV value of $314,159, which is agreed upon by the global community. The vision and mission of the Pi Network is to build the most popular and widely used cryptocurrency for daily services.
