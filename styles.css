@@ -10,11 +10,12 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 10px;
     position: relative;
     animation: gradientShift 10s ease infinite;
     background-size: 200% 200%;
+    padding-top: 8px;
 }
 
 @keyframes gradientShift {
@@ -40,11 +41,13 @@ body::before {
     backdrop-filter: blur(10px);
     border-radius: 24px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
-    max-width: 520px;
+    max-width: 480px;
     width: 100%;
     overflow: hidden;
     transform: translateY(0);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 95vh;
+    overflow-y: auto;
 }
 
 .container:hover {
@@ -55,7 +58,7 @@ body::before {
 header {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 45px 35px;
+    padding: 25px 25px 20px 25px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -81,15 +84,15 @@ header::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 12px;
     position: relative;
     z-index: 1;
 }
 
 header h1 {
-    font-size: 2.7em;
+    font-size: 2.1em;
     margin: 0;
     font-weight: 800;
     flex: 1;
@@ -103,21 +106,21 @@ header h1 {
 }
 
 .subtitle {
-    font-size: 1.15em;
+    font-size: 0.9em;
     opacity: 0.95;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     font-weight: 400;
     letter-spacing: 0.3px;
 }
 
 .gcv {
-    font-size: 1.05em;
+    font-size: 0.85em;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
-    padding: 12px 25px;
+    padding: 8px 18px;
     border-radius: 40px;
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 8px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     font-weight: 500;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -168,21 +171,21 @@ header h1 {
 }
 
 main {
-    padding: 45px 35px;
+    padding: 25px 25px;
     background: white;
 }
 
 .converter-box {
     background: linear-gradient(145deg, #f8faff, #f0f4ff);
     border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: 18px;
+    margin-bottom: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .input-group {
-    margin-bottom: 25px;
+    margin-bottom: 14px;
     position: relative;
 }
 
@@ -192,10 +195,10 @@ main {
 
 label {
     display: block;
-    font-size: 0.9em;
+    font-size: 0.75em;
     color: #4a5568;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -207,10 +210,10 @@ label i {
 
 input[type="number"] {
     width: 100%;
-    padding: 14px 18px;
+    padding: 10px 14px;
     border: 2px solid #e2e8f0;
     border-radius: 12px;
-    font-size: 1.05em;
+    font-size: 0.95em;
     transition: all 0.3s ease;
     background: white;
     color: #2d3748;
@@ -235,10 +238,10 @@ input[type="number"]::placeholder {
 
 select {
     width: 100%;
-    padding: 14px 18px;
+    padding: 10px 14px;
     border: 2px solid #e2e8f0;
     border-radius: 12px;
-    font-size: 1.05em;
+    font-size: 0.95em;
     background: white;
     color: #2d3748;
     cursor: pointer;
@@ -279,8 +282,8 @@ select option {
 
 .exchange-rate {
     text-align: center;
-    margin: 30px 0;
-    padding: 18px;
+    margin: 12px 0;
+    padding: 12px;
     background: linear-gradient(145deg, white, #f8fafc);
     border-radius: 16px;
     border: 1px solid #e2e8f0;
@@ -288,19 +291,19 @@ select option {
 }
 
 .exchange-rate p {
-    font-size: 1em;
+    font-size: 0.85em;
     color: #4a5568;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 #rateDisplay {
     font-weight: 800;
     color: #667eea;
-    font-size: 1.3em;
+    font-size: 1.1em;
     background: linear-gradient(135deg, #667eea, #764ba2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -311,8 +314,8 @@ select option {
     background: linear-gradient(145deg, #f0f4ff, #e6ecfe);
     border-left: none;
     border-radius: 16px;
-    padding: 25px;
-    margin-bottom: 30px;
+    padding: 14px;
+    margin-bottom: 12px;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
     border: 1px solid rgba(102, 126, 234, 0.2);
 }
@@ -321,8 +324,8 @@ select option {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
-    padding: 8px 0;
+    margin-bottom: 8px;
+    padding: 6px 0;
     border-bottom: 1px dashed rgba(102, 126, 234, 0.2);
 }
 
@@ -334,30 +337,30 @@ select option {
 .result-label {
     color: #4a5568;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 0.8em;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .result-value {
     color: #2d3748;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 0.95em;
     background: white;
-    padding: 6px 16px;
+    padding: 4px 12px;
     border-radius: 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .reset-btn {
     width: 100%;
-    padding: 16px;
+    padding: 12px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
     border-radius: 16px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -396,16 +399,17 @@ select option {
 
 footer {
     background: linear-gradient(145deg, #f8fafc, #f1f5f9);
-    padding: 25px 35px;
+    padding: 12px 25px;
     text-align: center;
     border-top: 1px solid #e2e8f0;
 }
 
 footer p {
-    font-size: 0.9em;
+    font-size: 0.75em;
     color: #64748b;
-    line-height: 1.6;
+    line-height: 1.4;
     font-weight: 500;
+    margin: 0;
 }
 
 /* Custom scrollbar */
