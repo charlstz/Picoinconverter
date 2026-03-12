@@ -427,25 +427,48 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
     .header-top {
         flex-direction: column;
         align-items: stretch;
+        gap: 15px;
+        margin-bottom: 20px;
     }
 
     header h1 {
-        font-size: 2.2em;
+        font-size: 1.8em;
+        letter-spacing: -0.3px;
     }
 
     header {
-        padding: 35px 25px;
+        padding: 30px 18px;
     }
 
     main {
-        padding: 30px 25px;
+        padding: 25px 18px;
     }
 
     .converter-box {
-        padding: 25px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .input-group {
+        margin-bottom: 18px;
+    }
+
+    input[type="number"],
+    select {
+        font-size: 16px;
+        padding: 12px 14px;
+    }
+
+    label {
+        font-size: 0.85em;
     }
 
     .result-item {
@@ -457,16 +480,232 @@ footer p {
     .result-value {
         width: 100%;
         text-align: center;
+        font-size: 1.1em;
+    }
+
+    .language-switcher {
+        width: 100%;
     }
 
     .language-switcher select {
         width: 100%;
         padding: 12px 40px 12px 18px;
+        font-size: 0.9em;
+    }
+
+    .exchange-rate {
+        margin: 20px 0;
+        padding: 15px;
     }
 
     .exchange-rate p {
         flex-direction: column;
         gap: 5px;
+        font-size: 0.95em;
+    }
+
+    #rateDisplay {
+        font-size: 1.15em;
+    }
+
+    .reset-btn {
+        padding: 14px;
+        font-size: 0.95em;
+        letter-spacing: 0.5px;
+    }
+
+    footer {
+        padding: 20px 18px;
+    }
+
+    footer p {
+        font-size: 0.8em;
+        line-height: 1.5;
+    }
+
+    .gcv {
+        font-size: 0.9em;
+        padding: 10px 18px;
+        margin-top: 10px;
+    }
+
+    .subtitle {
+        font-size: 0.95em;
+        margin-bottom: 10px;
+    }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header {
+        padding: 40px 30px;
+    }
+
+    main {
+        padding: 35px 30px;
+    }
+
+    .converter-box {
+        padding: 28px;
+    }
+
+    input[type="number"],
+    select {
+        font-size: 1em;
+        padding: 13px 16px;
+    }
+
+    .result-item {
+        flex-direction: row;
+    }
+
+    .result-value {
+        font-size: 1.15em;
+    }
+
+    .reset-btn {
+        padding: 15px;
+        font-size: 1em;
+    }
+}
+
+/* Large screens (1025px and up) */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 600px;
+    }
+
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    header {
+        padding: 50px 40px;
+    }
+
+    main {
+        padding: 50px 40px;
+    }
+
+    .converter-box {
+        padding: 32px;
+    }
+}
+
+/* Kindle E-reader (600px width, 800px height) */
+@media (max-width: 600px) and (max-height: 900px) and (color-gamut: srgb) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .header-top {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        font-size: 0.85em;
+        margin-bottom: 8px;
+    }
+
+    .gcv {
+        font-size: 0.8em;
+        padding: 8px 15px;
+        margin-top: 8px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .converter-box {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 0.8em;
+        margin-bottom: 5px;
+    }
+
+    input[type="number"],
+    select {
+        font-size: 15px;
+        padding: 10px 12px;
+        border-radius: 8px;
+    }
+
+    .exchange-rate {
+        margin: 15px 0;
+        padding: 12px;
+    }
+
+    .exchange-rate p {
+        font-size: 0.9em;
+    }
+
+    #rateDisplay {
+        font-size: 1.1em;
+    }
+
+    .conversion-result {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    .result-item {
+        margin-bottom: 10px;
+    }
+
+    .result-label {
+        font-size: 0.9em;
+    }
+
+    .result-value {
+        font-size: 1em;
+        padding: 4px 12px;
+    }
+
+    .reset-btn {
+        padding: 12px;
+        font-size: 0.85em;
+        letter-spacing: 0px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 0.75em;
     }
 }
 
