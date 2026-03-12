@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Coin Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>π Coin Converter</h1>
+                <div class="language-switcher">
+                    <select id="languageSelect">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="ar">العربية</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="pt">Português</option>
+                        <option value="ru">Русский</option>
+                        <option value="ko">한국어</option>
+                        <option value="it">Italiano</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="sw">Kiswahili</option>
+                    </select>
+                </div>
+            </div>
+            <p class="subtitle" id="subtitle">Convert between Pi Coin and USD</p>
+            <p class="gcv" id="gcv">Global Consensus Value: <strong>$314,159 per π</strong></p>
+        </header>
+
+        <main>
+            <div class="converter-box">
+                <div class="input-group">
+                    <label for="piInput" id="label-pi">Pi Coin (π)</label>
+                    <input 
+                        type="number" 
+                        id="piInput" 
+                        placeholder="Enter amount in Pi" 
+                        min="0" 
+                        step="0.01"
+                    >
+                </div>
+
+                <div class="exchange-rate">
+                    <p id="rate-label">1 π = <span id="rateDisplay">$314,159.00</span></p>
+                </div>
+
+                <div class="input-group">
+                    <label for="currencySelect" id="label-currency">Select Currency & Country (195+ Countries)</label>
+                    <select id="currencySelect">
+                        <optgroup label="AFRICA">
+                            <option value="ZAR">ZAR (R) - South Africa</option>
+                            <option value="EGP">EGP (£) - Egypt</option>
+                            <option value="NGN">NGN (₦) - Nigeria</option>
+                            <option value="KES">KES (Sh) - Kenya</option>
+                            <option value="GHS">GHS (₵) - Ghana</option>
+                            <option value="MAD">MAD (د.م.) - Morocco</option>
+                            <option value="TND">TND (د.ت) - Tunisia</option>
+                            <option value="MUR">MUR (₨) - Mauritius</option>
+                            <option value="UGX">UGX (Sh) - Uganda</option>
+                            <option value="ETB">ETB (Br) - Ethiopia</option>
+                            <option value="ZWL">ZWL ($) - Zimbabwe</option>
+                            <option value="BWP">BWP (P) - Botswana</option>
+                            <option value="NAD">NAD ($) - Namibia</option>
+                            <option value="MZN">MZN (MT) - Mozambique</option>
+                            <option value="XOF">XOF (Fr) - Ivory Coast & West Africa</option>
+                            <option value="XAF">XAF (Fr) - Cameroon & Central Africa</option>
+                            <option value="XPF">XPF (Fr) - French Polynesia</option>
+                            <option value="RWF">RWF (FRw) - Rwanda</option>
+                            <option value="TZS">TZS (Sh) - Tanzania</option>
+                            <option value="ZMW">ZMW (ZK) - Zambia</option>
+                        </optgroup>
+                        <optgroup label="ASIA PACIFIC">
+                            <option value="CNY">CNY (¥) - China</option>
+                            <option value="JPY">JPY (¥) - Japan</option>
+                            <option value="INR">INR (₹) - India</option>
+                            <option value="SGD">SGD ($) - Singapore</option>
+                            <option value="AUD">AUD ($) - Australia</option>
+                            <option value="NZD">NZD ($) - New Zealand</option>
+                            <option value="KRW">KRW (₩) - South Korea</option>
+                            <option value="THB">THB (฿) - Thailand</option>
+                            <option value="IDR">IDR (Rp) - Indonesia</option>
+                            <option value="MYR">MYR (RM) - Malaysia</option>
+                            <option value="PHP">PHP (₱) - Philippines</option>
+                            <option value="VND">VND (₫) - Vietnam</option>
+                            <option value="PKR">PKR (₨) - Pakistan</option>
+                            <option value="BDT">BDT (৳) - Bangladesh</option>
+                            <option value="LKR">LKR (Rs) - Sri Lanka</option>
+                            <option value="NPR">NPR (₨) - Nepal</option>
+                            <option value="TWD">TWD ($) - Taiwan</option>
+                            <option value="HKD">HKD ($) - Hong Kong</option>
+                            <option value="MMK">MMK (K) - Myanmar</option>
+                            <option value="LAK">LAK (₭) - Laos</option>
+                            <option value="KHD">KHD (៛) - Cambodia</option>
+                            <option value="MNT">MNT (₮) - Mongolia</option>
+                            <option value="FJD">FJD ($) - Fiji</option>
+                            <option value="PGK">PGK (K) - Papua New Guinea</option>
+                            <option value="WST">WST (T) - Samoa</option>
+                            <option value="VUV">VUV (Vt) - Vanuatu</option>
+                            <option value="SBD">SBD ($) - Solomon Islands</option>
+                            <option value="KGS">KGS (с) - Kyrgyzstan</option>
+                            <option value="KZT">KZT (₸) - Kazakhstan</option>
+                            <option value="UZS">UZS (so'm) - Uzbekistan</option>
+                            <option value="TJS">TJS (ЅМ) - Tajikistan</option>
+                            <option value="TMT">TMT (m) - Turkmenistan</option>
+                            <option value="AFN">AFN (؋) - Afghanistan</option>
+                            <option value="MVR">MVR (Rf) - Maldives</option>
+                            <option value="BDT">BDT (৳) - Bhutan</option>
+                        </optgroup>
+                        <optgroup label="CARIBBEAN & CENTRAL AMERICA">
+                            <option value="USD">USD ($) - United States & Caribbean</option>
+                            <option value="CAD">CAD ($) - Canada</option>
+                            <option value="MXN">MXN ($) - Mexico</option>
+                            <option value="DOP">DOP (RD$) - Dominican Republic</option>
+                            <option value="JMD">JMD (J$) - Jamaica</option>
+                            <option value="TTD">TTD (TT$) - Trinidad and Tobago</option>
+                            <option value="BZD">BZD ($) - Belize</option>
+                            <option value="CRC">CRC (₡) - Costa Rica</option>
+                            <option value="PAB">PAB (B/.) - Panama</option>
+                            <option value="HNL">HNL (L) - Honduras</option>
+                            <option value="GTQ">GTQ (Q) - Guatemala</option>
+                            <option value="NIO">NIO (C$) - Nicaragua</option>
+                            <option value="SVC">SVC ($) - El Salvador</option>
+                            <option value="BAD">BAD ($) - Bahamas</option>
+                            <option value="BRD">BRD ($) - Barbados</option>
+                            <option value="KYD">KYD ($) - Cayman Islands</option>
+                            <option value="BSD">BSD ($) - Bahamas</option>
+                            <option value="ANG">ANG (ƒ) - Curacao & Sint Maarten</option>
+                            <option value="AWG">AWG (ƒ) - Aruba</option>
+                            <option value="XCD">XCD ($) - East Caribbean</option>
+                        </optgroup>
+                        <optgroup label="EUROPE">
+                            <option value="EUR">EUR (€) - European Union</option>
+                            <option value="GBP">GBP (£) - United Kingdom</option>
+                            <option value="CHF">CHF (₣) - Switzerland</option>
+                            <option value="SEK">SEK (kr) - Sweden</option>
+                            <option value="NOK">NOK (kr) - Norway</option>
+                            <option value="DKK">DKK (kr) - Denmark</option>
+                            <option value="ISK">ISK (kr) - Iceland</option>
+                            <option value="RUB">RUB (₽) - Russia</option>
+                            <option value="RSD">RSD (дин) - Serbia</option>
+                            <option value="BGN">BGN (лв) - Bulgaria</option>
+                            <option value="HRK">HRK (kn) - Croatia</option>
+                            <option value="HUF">HUF (Ft) - Hungary</option>
+                            <option value="CZK">CZK (Kč) - Czech Republic</option>
+                            <option value="PLN">PLN (zł) - Poland</option>
+                            <option value="RON">RON (lei) - Romania</option>
+                            <option value="UAH">UAH (₴) - Ukraine</option>
+                            <option value="BYN">BYN (Br) - Belarus</option>
+                            <option value="GEL">GEL (₾) - Georgia</option>
+                            <option value="AMD">AMD (֏) - Armenia</option>
+                            <option value="AZN">AZN (₼) - Azerbaijan</option>
+                            <option value="TRY">TRY (₺) - Turkey</option>
+                            <option value="MDL">MDL (L) - Moldova</option>
+                            <option value="MNE">EUR - Montenegro</option>
+                            <option value="ALB">ALL (L) - Albania</option>
+                            <option value="MKD">MKD (ден) - North Macedonia</option>
+                            <option value="BOH">KM - Bosnia Herzegovina</option>
+                            <option value="EEK">EUR - Estonia</option>
+                            <option value="LVL">EUR - Latvia</option>
+                            <option value="LTL">EUR - Lithuania</option>
+                            <option value="SOS">SOS (Sh) - Somalia</option>
+                        </optgroup>
+                        <optgroup label="MIDDLE EAST">
+                            <option value="AED">AED (د.إ) - United Arab Emirates</option>
+                            <option value="SAR">SAR (﷼) - Saudi Arabia</option>
+                            <option value="KWD">KWD (د.ك) - Kuwait</option>
+                            <option value="QAR">QAR (﷼) - Qatar</option>
+                            <option value="BHD">BHD (.د.ب) - Bahrain</option>
+                            <option value="OMR">OMR (ر.ع.) - Oman</option>
+                            <option value="JOD">JOD (د.ا) - Jordan</option>
+                            <option value="ILS">ILS (₪) - Israel</option>
+                            <option value="LBP">LBP (ل.ل) - Lebanon</option>
+                            <option value="SYP">SYP (ل.س) - Syria</option>
+                            <option value="IQD">IQD (د.ع) - Iraq</option>
+                            <option value="IRR">IRR (﷼) - Iran</option>
+                            <option value="YER">YER (﷼) - Yemen</option>
+                            <option value="AED">AED (د.إ) - Palestine</option>
+                        </optgroup>
+                        <optgroup label="SOUTH AMERICA">
+                            <option value="BRL">BRL (R$) - Brazil</option>
+                            <option value="ARS">ARS ($) - Argentina</option>
+                            <option value="CLP">CLP ($) - Chile</option>
+                            <option value="COP">COP ($) - Colombia</option>
+                            <option value="PEN">PEN (S/.) - Peru</option>
+                            <option value="VES">VES (Bs) - Venezuela</option>
+                            <option value="UYU">UYU ($) - Uruguay</option>
+                            <option value="PYG">PYG (₲) - Paraguay</option>
+                            <option value="BOB">BOB (Bs.) - Bolivia</option>
+                            <option value="GYD">GYD ($) - Guyana</option>
+                            <option value="SRD">SRD ($) - Suriname</option>
+                            <option value="XPF">XPF (Fr) - French Guiana</option>
+                        </optgroup>
+                        <optgroup label="CRYPTOCURRENCIES">
+                            <option value="BTC">BTC (₿) - Bitcoin</option>
+                            <option value="ETH">ETH (Ξ) - Ethereum</option>
+                            <option value="BNB">BNB - Binance Coin</option>
+                            <option value="XRP">XRP (✕) - Ripple</option>
+                            <option value="ADA">ADA (₳) - Cardano</option>
+                            <option value="SOL">SOL ◎ - Solana</option>
+                            <option value="DOGE">DOGE (Ð) - Dogecoin</option>
+                            <option value="USDT">USDT - Tether</option>
+                            <option value="USDC">USDC - USD Coin</option>
+                            <option value="LTC">LTC (Ł) - Litecoin</option>
+                            <option value="LINK">LINK - Chainlink</option>
+                            <option value="MATIC">MATIC - Polygon</option>
+                            <option value="ATOM">ATOM - Cosmos</option>
+                            <option value="XLM">XLM - Stellar</option>
+                            <option value="APE">APE - ApeCoin</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="fiatInput" id="label-fiat"><span id="currencyLabel">USD</span> Amount</label>
+                    <input 
+                        type="number" 
+                        id="fiatInput" 
+                        placeholder="Enter amount in selected currency" 
+                        min="0" 
+                        step="0.01"
+                    >
+                </div>
+            </div>
+
+            <div class="conversion-result">
+                <div class="result-item">
+                    <span class="result-label" id="label-result-1">π to <span id="piToLabel">USD</span>:</span>
+                    <span class="result-value" id="piToFiat">$0.00</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label" id="label-result-2"><span id="fiatToLabel">USD</span> to π:</span>
+                    <span class="result-value" id="fiatToPi">0.00000 π</span>
+                </div>
+            </div>
+
+            <button id="resetBtn" class="reset-btn">Reset</button>
+        </main>
+
+        <footer>
+            <p id="footer-text">The vision and mission of the Pi Network is to build the most popular and widely used cryptocurrency for daily services.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
